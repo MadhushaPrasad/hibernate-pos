@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="hibernate">
+  <library name="hibernate-framework">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../lib/hibernate-framework/antlr-2.7.7.jar!/" />
       <root url="jar://$PROJECT_DIR$/../lib/hibernate-framework/byte-buddy-1.10.2.jar!/" />
