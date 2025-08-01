@@ -15,7 +15,7 @@ public class HibernateUtil {
     private static SessionFactory sessionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
-        File file = new File("");
+        File file = new File("2 - Bootstrapping/resources/application.properties");
 
         StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                 .loadProperties(file)
