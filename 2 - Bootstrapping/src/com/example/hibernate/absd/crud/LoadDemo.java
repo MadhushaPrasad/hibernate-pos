@@ -5,24 +5,16 @@ import com.example.hibernate.absd.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import java.io.Serializable;
-
-public class SaveDemo {
+public class LoadDemo {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.openSession();
 
-//        ============= Console session =============
-        System.out.println(session);
-
-//       ======== create a customer =========
-//       this type used for native hibernate
         session.beginTransaction();
-
-        Customer madhusha = new Customer("C001", "Madhusha", "Kalutara");
-        Serializable savedDetails = session.save(madhusha);
-
-        System.out.println(savedDetails);
+//      =================================================================
+        Customer c002 = session.getReference(Customer.class, "C002");
+        System.out.println(c002);
+//      ==================================================================
 
         session.getTransaction().commit();
 
