@@ -1,8 +1,21 @@
 package com.example.hibernate.absd.entity;
 
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Customer")
 public class Customer {
+
+    @Id
+    @Column(name = "id")
     private String id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "address")
     private String address;
 
     public Customer() {
