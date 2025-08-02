@@ -1,5 +1,6 @@
 package com.example.hibernate.absd.utils;
 
+import com.example.hibernate.absd.entity.Customer;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
@@ -21,6 +22,7 @@ public class HibernateUtil {
                 .loadProperties(file)
                 .build();
         Metadata metadata = new MetadataSources(serviceRegistry)
+                .addAnnotatedClass(Customer.class)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();
